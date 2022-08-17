@@ -13,8 +13,7 @@ from pokeutils import Pokedex
 pokedex_url = "https://www.pokewiki.de/Liste_der_Pok%C3%A9mon_nach_Hisui-Pok%C3%A9dex"
 
 # Create Pokedex and save intermediate Pokemon images at given path
-pokedex = Pokedex(pokedex_url,
-                  save_path=r"C:\my\path")
+pokedex = Pokedex(pokedex_url, save_path=r"C:\my\path")
 
 # Create PNG poster containing all Pokemons in Pokedex
 pokedex.make_poster(rows=19, cols=13, file_path="Hisuidex.png", grid_offset=0)
