@@ -80,7 +80,7 @@ class Pokedex(object):
             for column in np.arange(cols):
                 i = row * cols + column
 
-                if i > -1 + grid_offset:
+                if -1 + grid_offset < i < self.num_pokemons + grid_offset:
                     img = plt.imread(self.pokemons[i - grid_offset].local_img_path)
                     title = f"#{i + 1 - grid_offset:03d} {self.pokemons[i - grid_offset].german_name}"
                     ax = axes[row, column]
